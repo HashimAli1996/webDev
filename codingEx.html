@@ -172,11 +172,11 @@
 		}
 
 		function addTextToP(){
-			para.appendChild(document.getElementById("input").value);
+			para.appendChild(document.getElementById("input"))
 		}
 
 		function deleteP() {
-            document.body.removeChild(para);
+
 		}
 
 	</script>
@@ -228,7 +228,20 @@
         <p id="exampleJson"></p>
         <p id="kingsJson"></p>
     <script>
- 
+        var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+
+        var request = new XMLHttpRequest();
+
+        request.open('GET', requestURL);
+
+        request.responseType = 'json';
+
+        request.send();
+
+        request.onload = function () {
+            //console.log(request.response);
+            document.getElementById("exampleJson").innerHTML = JSON.stringify(request.response);
+        }
     </script>
     </div>
 
