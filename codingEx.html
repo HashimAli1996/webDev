@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> Coding exercises</title>
+</head>
+
+<body>
+    <div> Coding exercise 1 </div>
+    <script>
+    var test = "lol";
+    document.write(test);
+    //alert(test);
+    console.log(test);
+    </script>
+
+    <div>Coding exercise 2</div>
+    <script>
+    function square(x) {
+        return x * x;
+    }
+    document.write(square(5));
+    </script>
+
+    <br>
+
+    <script>
+    function sum3(x, y, z) {
+        return x + y + z;
+    }
+    document.write(sum3(1, 2, 3));
+    </script>
+
+    <br>
+
+    <script>
+    var myPerson = {
+        name: "abdi",
+        age: 2,
+        occupation: "idk"
+    };
+    document.write("<br>")
+
+    document.write(myPerson.name + "<br>" + myPerson.age + "<br>" + myPerson.occupation + "<br>");
+
+    myPerson.name = "hashim", myPerson.age = 2, myPerson.occupation = "yidk"
+
+    document.write(myPerson.name + "<br>" + myPerson.age + "<br>" + myPerson.occupation);
+
+    function sayHello() {
+        alert("Hello World")
+    }
+
+    function add1() {
+        alert(myPerson.age)
+
+        myPerson.age += 1;
+
+        alert("HBD u r now " + myPerson.age)
+    }
+	</script>
+	<br>
+    <input type="button" onclick="sayHello()" value="Say Hello">
+    <br>
+    <input type="button" onclick="add1()" value="hbd">
+
+    
+
+    <div>Coding exercise 3</div>
+    <script>
+    	var string = "he said \"my name is elliot\" "
+
+    	document.write(string);
+    	document.write("<br>");
+    	document.write(string.toUpperCase());
+    	document.write("<br>");
+    	document.write(2 + (+"1"));
+    	document.write("<br>");
+
+    	var myList = ["string1", "string 2", "string 3"];
+
+    	document.write(myList); document.write("<br>");
+
+    	for (var i = 0; i< myList.length; i++) {
+    		document.write(myList[i]);
+    		document.write("<br>");
+    	}
+
+    	myList.splice(myList.length, 0, "string 4 dude")
+    	document.write(myList); document.write("<br>");
+
+    	myList.splice(myList.length - 1, 1)
+    	document.write(myList); document.write("<br>");
+    </script>
+
+    <div>Coding CHALLENge 4</div>
+    <script>
+
+    	var myPerson2 = {
+        name: "abdi",
+        age: 24,
+        occupation: "idk"
+    	};
+
+    	if(myPerson2.age >= 20 && myPerson2.age <= 40){
+    		document.write("true");document.write("<br>");
+    	} else {
+    		document.write("false");document.write("<br>");
+    	}
+
+
+    </script>
+
+	<div>Coding Challenege 5 &amp; 6</div>
+
+	<script>
+
+		for(var j = 0; j <= 100; j++){
+			
+			if((j % 3 == 0) && (j % 5 == 0)){
+				document.write("FizzBuzz");
+				document.write("<br>");
+			} else if(j % 3 == 0){
+				document.write("Fizz");
+				document.write("<br>");
+			} else if(j % 5 == 0){
+				document.write("Buzz");
+				document.write("<br>");
+			} else {
+				document.write(j)
+				document.write("<br>");
+			}
+		}
+
+		document.write("-------------------------------------------")
+		document.write("<br>");
+
+		function divThreeSubOne(bigNumber){
+
+			document.write("Start: " + bigNumber);
+
+			while(bigNumber != 1) {
+				if(bigNumber % 3 == 0){
+				bigNumber /= 3;
+				document.write(" divided by 3 = ");
+				document.write(bigNumber);document.write("<br>");
+				} else {
+					bigNumber -= 1;
+					document.write(" subtracted by 1 = ");
+					document.write(bigNumber);document.write("<br>");
+
+				}
+			}
+		}
+
+		divThreeSubOne(2457);
+		document.write("----------------------------");
+		document.write("<br>");
+	</script>
+
+	<div>Coding exercise 7</div>
+
+	<p id="demo"></p>
+
+	<script>
+		
+		document.getElementById("demo").innerHTML = "Hello World";
+
+		function createP(){
+			var para  = document.createElement("P");
+		}
+
+		function addTextToP(){
+			para.appendChild(document.getElementById("input").value);
+		}
+
+		function deleteP() {
+            document.body.removeChild(para);
+		}
+
+	</script>
+
+	<input type="button" onclick="createP()" value="Create paragraph tags">
+
+	<input type="text" id="input" placeholder="enter text:">
+
+	<input type="button" onclick="addTextToP()" value="Add Text to paragraph tags">
+
+	<input type="button" onclick="deleteP()" value="Delete p tags">
+
+	<script>
+
+		//Word Doc Types and Ops
+
+		var example = 5;
+		console.log(example);
+
+		var exampleOp = 5 + 5;
+		console.log(exampleOp);
+
+		var word = "HelloWorld";
+		console.log(word);
+
+		var word = "Hello" + "World";
+		console.log(word);
+
+		
+		console.log(5 + 5); //result = 10
+
+		console.log(5 * 10); //result = 50
+
+		console.log(10 % 3); //result = 1
+
+		console.log(5 + 10  / 2 * 5 - 10); //result = 20
+
+		console.log((6+10) / 2*5 - 10); //result = 30
+
+		console.log(1 === true); //result = false
+
+		//done the rest in Java training will not continue.
+
+	</script>
+
+    <div><h3>Coding Challenge 8 &amp; 9</h3></div>
+
+    <div>
+        <p id="exampleJson"></p>
+        <p id="kingsJson"></p>
+    <script>
+ 
+    </script>
+    </div>
+
+
+	<!--    <div>Test slide code</div>-->
+    
+    <script>
+    	/*
+    	var myVariable = 10;
+
+    function func() {
+        myVariable = 25;
+        var myVariable;
+        console.log(myVariable);
+    }
+
+    func();
+
+    console.log(myVariable);
+    
+
+    function myFunc() {
+
+        document.write("hi");
+    }
+    myFunc();
+    
+    var expression = function myFunc1() {
+        console.log("hi");
+    }
+    document.write(expression);*/
+    </script>
+
+    </script>
+    
+    
+</body>
+
+</html>
